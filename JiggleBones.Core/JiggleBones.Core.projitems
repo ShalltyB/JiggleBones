@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>d57a2006-8719-4d68-afab-f1224b1eda9b</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>JiggleBones</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)JiggleBones.SceneController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhysicsConstraints\JiggleBones.NumericSpring.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhysicsConstraints\JiggleBones.ConstraintUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JiggleBones.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhysicsConstraints\JiggleBones.Inertia.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhysicsConstraints\JiggleBones.IPhysicsConstraint.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhysicsConstraints\JiggleBones.MathUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhysicsConstraints\JiggleBones.Matrix3x3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhysicsConstraints\JiggleBones.PhysicsBody.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhysicsConstraints\JiggleBones.PointConstraint.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhysicsConstraints\JiggleBones.PointConstraintBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhysicsConstraints\JiggleBones.QuaternionUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhysicsConstraints\JiggleBones.SoftConstraintParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhysicsConstraints\JiggleBones.VectorUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhysicsConstraints\JiggleBones.World.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\centerCircle.png" />
+  </ItemGroup>
+</Project>
